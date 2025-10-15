@@ -13,15 +13,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Clonar el proyecto
-       uses: actions/checkout@v4
+      - name: Clonar el proyecto
+        uses: actions/checkout@v4
 
-      -name: Ajustamos la version de Java
-       uses: actions/setup-java@4
-       with:
-         distribution: 'temurin'
-         java-version: '23'
-         cache: 'maven'
+      - name: Ajustamos la version de Java
+        uses: actions/setup-java@4
+        with:
+          distribution: 'temurin'
+          java-version: '23'
+          cache: 'maven'
 
-      -naame: Instalar las dependencias
-       run: mvn install -DskipTests
+      - name: Instalar las dependencias
+        run: mvn install -DskipTests
